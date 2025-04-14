@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Steam游戏锐评 - {{username}}</title>
+    <!-- 引用本地Markdown渲染库 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: #1b2838;
+            color: #c7d5e0;
+            font-family: 'Microsoft YaHei', sans-serif;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        .page-wrapper {
+            width: 800px;
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            background-color: #2a475e;
+            padding: 15px 25px 25px 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        h1 {
+            color: #66c0f4;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #66c0f4;
+        }
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 3px solid #66c0f4;
+            flex-shrink: 0;
+        }
+        .username {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .profile-link {
+            margin-top: 3px;
+        }
+        .profile-link a {
+            color: #66c0f4;
+            text-decoration: none;
+        }
+        .profile-link a:hover {
+            text-decoration: underline;
+        }
+        .analysis {
+            line-height: 1.5;
+            font-size: 16px;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            max-width: 100%;
+        }
+        /* Markdown样式 */
+        .analysis h1, .analysis h2, .analysis h3 {
+            color: #66c0f4;
+            margin-top: 14px;
+            margin-bottom: 8px;
+        }
+        .analysis p {
+            margin: 8px 0;
+            display: block; /* 确保p标签是块级元素 */
+        }
+        .analysis ul, .analysis ol {
+            padding-left: 25px;
+            margin: 8px 0;
+        }
+        .analysis li {
+            margin-bottom: 5px;
+        }
+        .analysis strong {
+            color: #ffffff;
+        }
+        .analysis em {
+            color: #ff9d33;
+        }
+        .analysis blockquote {
+            border-left: 3px solid #66c0f4;
+            padding-left: 10px;
+            margin-left: 10px;
+            margin: 8px 0 8px 10px;
+            color: #8f98a0;
+        }
+        .analysis code {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: Consolas, monospace;
+            color: #66c0f4;
+        }
+        .footer {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 14px;
+            color: #8f98a0;
+            padding: 12px;
+            border-top: 1px solid #66c0f4;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 0 0 8px 8px;
+        }
+        .highlight {
+            color: #66c0f4;
+            font-weight: bold;
+        }
+        .credits {
+            font-size: 12px;
+            opacity: 0.6;
+            margin-top: 4px;
+            padding-bottom: 2px;
+        }
+        .credits a {
+            color: #8f98a0;
+            text-decoration: none;
+        }
+        .credits a:hover {
+            text-decoration: underline;
+        }
+        .xiaogu-footer {
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .xiaogu-logo {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            margin-right: 8px;
+            border: 1px solid #66c0f4;
+        }
+        .token-info {
+            font-size: 12px;
+            opacity: 0.7;
+            margin-top: 8px;
+        }
+        .github-icon {
+            width: 14px;
+            height: 14px;
+            margin-right: 2px;
+            vertical-align: middle;
+            fill: #8f98a0;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="container">
+            <h1>Steam游戏锐评</h1>
+            <div class="user-info">
+                {{avatar_html}}
+                <div>
+                    <div class="username">{{username}}</div>
+                    <div class="profile-link"><a href="{{profile_url}}" target="_blank">Steam个人资料</a></div>
+                </div>
+            </div>
+            <div class="analysis" id="analysis-content">
+                {{analysis}}
+            </div>
+            <div class="footer">
+                由AI生成的游戏品味分析 · 仅供娱乐 · {{date}} {{group_info}}
+                <div class="xiaogu-footer">
+                    <img class="xiaogu-logo" src="https://q1.qlogo.cn/g?b=qq&nk=2087033899&s=100" alt="小咕">
+                    <span>小咕的Steam游戏锐评</span>
+                </div>
+                <div class="token-info">{{token_info}}</div>
+                <div class="credits"><a href="https://github.com/Duogeyu/nonebot_steam_judger" target="_blank"><svg class="github-icon" viewBox="0 0 16 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>nonebot_steam_judger</a>灵感来源 <a href="https://github.com/kutius/steam-judger" target="_blank">Steam-Judger</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 添加Markdown渲染脚本 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const analysisContent = document.getElementById('analysis-content');
+            const markdownText = analysisContent.textContent;
+            
+            // 检测是否包含Markdown语法
+            const containsMarkdown = /(\*\*|__|##|>|\[.*\]\(.*\)|```|\*|\-\s|\d\.\s)/.test(markdownText);
+            
+            if (containsMarkdown) {
+                analysisContent.innerHTML = marked.parse(markdownText);
+            }
+        });
+    </script>
+</body>
+</html> 
