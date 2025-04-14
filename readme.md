@@ -1,10 +1,10 @@
-# nonebot_steam_judger 插件
+# nonebot_steam_judger AI 游戏库锐评插件
 
-nonebot_steam_judger是一个OneBot插件，可以获取用户的Steam游戏库数据，并使用AI生成毒舌风格的游戏品味分析。通过解析用户的游戏时长和偏好，生成一份犀利幽默的评价报告，以图片形式呈现。
+AI 游戏库锐评 nonebot_steam_judger是一个NoneBot插件，可以获取用户的Steam游戏库数据，并使用AI生成毒舌风格的游戏品味分析。通过解析用户的游戏时长和偏好，生成一份犀利幽默的评价报告，以图片形式呈现。
 
 ## 效果展示
 
-![Steam游戏锐评示例](analysis_20250414_200422.png)
+![Steam游戏锐评示例](https://github.com/Duogeyu/nonebot_steam_judger/blob/cbfea2d8828a511986832db606f2a1db917182a9/data/1814741500/analysis_20250414_200422.png)
 
 ## 功能介绍
 
