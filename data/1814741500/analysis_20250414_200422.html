@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Steam游戏锐评 - トトデDuogeyu</title>
+    <!-- 引用本地Markdown渲染库 -->
+    <script src="D:\创作\vrchat\Lagrange.OneBot\vrchat_xiaogu\vrchat_xiaogu\plugins\steam_talk\static\marked.min.js"></script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: #1b2838;
+            color: #c7d5e0;
+            font-family: 'Microsoft YaHei', sans-serif;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        .page-wrapper {
+            width: 800px;
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            background-color: #2a475e;
+            padding: 15px 25px 25px 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        h1 {
+            color: #66c0f4;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #66c0f4;
+        }
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 3px solid #66c0f4;
+            flex-shrink: 0;
+        }
+        .username {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .profile-link {
+            margin-top: 3px;
+        }
+        .profile-link a {
+            color: #66c0f4;
+            text-decoration: none;
+        }
+        .profile-link a:hover {
+            text-decoration: underline;
+        }
+        .analysis {
+            line-height: 1.5;
+            font-size: 16px;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            max-width: 100%;
+        }
+        /* Markdown样式 */
+        .analysis h1, .analysis h2, .analysis h3 {
+            color: #66c0f4;
+            margin-top: 14px;
+            margin-bottom: 8px;
+        }
+        .analysis p {
+            margin: 8px 0;
+            display: block; /* 确保p标签是块级元素 */
+        }
+        .analysis ul, .analysis ol {
+            padding-left: 25px;
+            margin: 8px 0;
+        }
+        .analysis li {
+            margin-bottom: 5px;
+        }
+        .analysis strong {
+            color: #ffffff;
+        }
+        .analysis em {
+            color: #ff9d33;
+        }
+        .analysis blockquote {
+            border-left: 3px solid #66c0f4;
+            padding-left: 10px;
+            margin-left: 10px;
+            margin: 8px 0 8px 10px;
+            color: #8f98a0;
+        }
+        .analysis code {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: Consolas, monospace;
+            color: #66c0f4;
+        }
+        .footer {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 14px;
+            color: #8f98a0;
+            padding: 12px;
+            border-top: 1px solid #66c0f4;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 0 0 8px 8px;
+        }
+        .highlight {
+            color: #66c0f4;
+            font-weight: bold;
+        }
+        .credits {
+            font-size: 12px;
+            opacity: 0.6;
+            margin-top: 4px;
+            padding-bottom: 2px;
+        }
+        .credits a {
+            color: #8f98a0;
+            text-decoration: none;
+        }
+        .credits a:hover {
+            text-decoration: underline;
+        }
+        .xiaogu-footer {
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .xiaogu-logo {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            margin-right: 8px;
+            border: 1px solid #66c0f4;
+        }
+        .token-info {
+            font-size: 12px;
+            opacity: 0.7;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="container">
+            <h1>Steam游戏锐评</h1>
+            <div class="user-info">
+                <img class="avatar" src="https://avatars.steamstatic.com/b6dac6827721da2e2ae95a7f558e30362b8ac3be_full.jpg" alt="トトデDuogeyu">
+                <div>
+                    <div class="username">トトデDuogeyu</div>
+                    <div class="profile-link"><a href="https://steamcommunity.com/profiles/76561198839166160" target="_blank">Steam个人资料</a></div>
+                </div>
+            </div>
+            <div class="analysis" id="analysis-content">
+                # **トトデDuogeyuのSteam游戏库锐评报告（2025-04-14版）**  
+——*"这位更是重量级，Steam库存里藏着一座赛博精神病院"*  
+
+## **迷惑行为大赏**  
+1. **VR社交悍匪**：  
+   - *VRChat 2541小时* + *OVR Toolkit 1495小时* = **您是把Steam玩成元宇宙社保缴纳系统了吧？** 别人VR是偶尔娱乐，您是直接电子坐牢，建议改ID为"赛博居委会主任"。  
+   - *Live2DViewerEX 1050小时*：对着纸片人办公的浓度，连日本公务员看了都直呼"社畜の鑑"。  
+
+2. **FPS人形自走外挂**：  
+   - *Apex 2284h* + *CS2 2269h* + *战地系列合计2530h* = **您的枪管怕是比上班族的肝还烫**。但考虑到*Left 4 Dead 2 1260h*，真相可能是：**"打不过真人就虐丧尸"の经典阿Q行为**。  
+
+3. **硬核打脸现场**：  
+   - *Blender 1272h*：表面是3D艺术家，但*Wallpaper Engine 685h*暴露了本质——**"桌面装修大赛冠军"**。  
+   - *Soundpad 747h*：建议和*HGFaceDD 695h*联动，组成**"语音区祖安钢琴师+面部捕捉颜艺大师"**出道。  
+
+## **用户品味鉴定**  
+- **核心成分**：50%电竞肝帝 + 30%二次元赛博房东 + 20%模拟经营养老怪。  
+- **矛盾点**：*Stardew Valley 694h*和*MH Rise 689h*并列——**"白天种田晚上砍龙，精分式电子养生"**，建议下次直接玩《怪物猎人：物语》省下切换游戏的2秒。  
+
+## **缺德推荐**  
+1. **《Phasmophobia》**：VR+FPS+社交，三位一体满足您的赛博通宵需求。  
+2. **《Holocure》**：免费！二次元！刷子游戏！完美填补您*Terraria 818h*后的电子空虚。  
+3. **《Microsoft Flight Simulator》**：既然爱装修（Wallpaper Engine）又爱看风景（VRChat），不如直接开飞机看地球PPT。  
+
+## **彩蛋**  
+- **113款游戏总时长≈2.5年**，但*Blender时长＞Stardew Valley*——**"嘴上说想养老，身体却在卷3D建模"**，当代青年精神状态标本了属于是。  
+
+## **反鸡汤总结**  
+> "您用游戏时长证明了一件事：  
+> **人类不需要睡眠，只需要Steam年度总结的虚假成就感**" 💻🔥
+            </div>
+            <div class="footer">
+                由AI生成的游戏品味分析 · 仅供娱乐 · 2025年04月14日 来自群：917883584
+                <div class="xiaogu-footer">
+                    <img class="xiaogu-logo" src="https://q1.qlogo.cn/g?b=qq&nk=2087033899&s=100" alt="小咕">
+                    <span>小咕的Steam游戏锐评</span>
+                </div>
+                <div class="token-info">Model: deepseek-v3-0324 | Tokens: 1089 (P: 440, C: 649)</div>
+                <div class="credits">灵感来源 <a href="https://github.com/kutius/steam-judger" target="_blank">Steam-Judger</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 添加Markdown渲染脚本 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const analysisContent = document.getElementById('analysis-content');
+            const markdownText = analysisContent.textContent;
+            
+            // 检测是否包含Markdown语法
+            const containsMarkdown = /(\*\*|__|##|>|\[.*\]\(.*\)|```|\*|\-\s|\d\.\s)/.test(markdownText);
+            
+            if (containsMarkdown) {
+                analysisContent.innerHTML = marked.parse(markdownText);
+            }
+        });
+    </script>
+</body>
+</html> 
