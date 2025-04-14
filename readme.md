@@ -4,7 +4,7 @@ nonebot_steam_judger是一个OneBot插件，可以获取用户的Steam游戏库�
 
 ## 效果展示
 
-![Steam游戏锐评示例](analysis_20250414_200422.png)
+![Steam游戏锐评示例](https://github.com/Duogeyu/nonebot_steam_judger/blob/cbfea2d8828a511986832db606f2a1db917182a9/data/1814741500/analysis_20250414_200422.png)
 
 ## 功能介绍
 
